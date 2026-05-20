@@ -1,0 +1,179 @@
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general styles */
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #21493C;
+    line-height: 1.6;
+}
+
+/* Makes all images responsive */
+img{
+    width: 100%;
+    display: block;
+}
+
+/* Removes underline from links */
+a{
+    text-decoration: none;
+}
+
+footer {
+  background-color: #2c5f4f;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* header */
+
+header{
+    background-color: #F3F1EE;
+    border-bottom: 1px solid #d9d9d9;
+    /* Keeps navbar visible when scrolling */
+    position: sticky; /* makes the navbar stick */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-all{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img{
+    width: 130px;
+}
+
+/* Removes bullet points from nav */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+/* Displays nav items horizontally */
+nav a{
+    color: #21493C;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #C98B2E;
+}
+
+.header-user img{
+    width: 35px;
+}
+
+/* hero section */
+
+.hero{
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-content{
+    flex: 1;
+}
+
+.hero-content h1{
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 25px;
+    letter-spacing: -3px; /* Makes text tighter like Pinterest/Apple */
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    color: #4f4f4f;
+}
+
+.button{
+    display: inline-block;
+    background-color: #21493C;
+    color: white;
+    padding: 16px 34px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover{
+    background-color: #C98B2E;
+}
+
+.hero img{
+    width: 700px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* main section */
+
+main section:not(.hero){
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 30px;
+}
+
+main section h2{
+    font-size: 3rem;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+main section p{
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* who we serve */
+
+.serving{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.big-card{
+    flex: 1;
+    background-color: #F3F1EE;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-left: 5px solid #21493C;
+    border-bottom: 5px solid #21493C;
+}
+
+.serving img{
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* end index */
