@@ -177,3 +177,37 @@ main section p{
 }
 
 /* end index */
+/* restaurants */
+
+.rest-grid{
+    display:grid;
+    gap:2rem;
+}
+
+.rest-card{
+    background-color: #F3F1EE;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.rest-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.rest-info{
+    padding: 2rem;
+}
+
+.s-desc{
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.food-list{
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+}
