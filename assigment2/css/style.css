@@ -75,6 +75,14 @@ nav a:hover{
     color: #C98B2E;
 }
 
+nav a.active {
+  background-color: #21493C;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
 .header-user img{
     width: 35px;
 }
@@ -118,6 +126,7 @@ nav a:hover{
     border-radius: 40px;
     font-weight: bold;
     transition: 0.3s;
+    margin-top: 10px;
 }
 
 .button:hover{
@@ -178,23 +187,31 @@ main section p{
 
 /* end index */
 /* restaurants */
+.rest-container{
+    text-align: center;
+    margin-top: 40px;
+    font-size:1.3rem;
+    margin-bottom: -40px;
+}
 
 .rest-grid{
     display:grid;
     gap:2rem;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    padding: 0 1.5rem;
 }
 
 .rest-card{
     background-color: #F3F1EE;
     border-radius: 20px;
-    overflow: hidden;
-
+    overflow: hidden; /* Hides anything overflowing outside the card */
 }
 
 .rest-card img{
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: cover; /* Crops image nicely without stretching */
+    display:block; /* Removes tiny bottom spacing under image */
 }
 
 .rest-info{
@@ -208,6 +225,43 @@ main section p{
 }
 
 .food-list{
-    margin: 0.75rem 0;
+    margin: 0.75rem 0; /* Space above and below list */
     padding-left: 1.25rem;
 }
+
+/* end restaurants */
+/* reservation */
+
+.form-container{
+    display:flex;
+    justify-content: center;
+}
+
+#recom-form{
+    background-color: #F3F1EE;
+    border-radius: 5px;
+    max-width: 650px;
+    padding: 1.3rem;
+    width: 100%;
+}
+
+.form-div{
+    margin-bottom: 1rem;
+}
+
+label{
+    display:block;
+    margin-bottom: 0.35rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+select{
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
+/* end reservation */
