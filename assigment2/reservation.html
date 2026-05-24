@@ -28,4 +28,133 @@
 
                 <a href="register.html" class="header-user">
                     <img src="images/user.png" alt="User icon">
-         
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="rest-container">
+                <h1>Make Your Reservation</h1>
+                <p>Complete the form below.</p>
+            </div>
+            <section class="form-container">
+                <div id="reservationErrorBox" class="error-box" role="alert"></div>
+
+                <form id="reserve-form" method="post"
+                action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+
+                <div class="form-div">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" autocomplete="name">
+                  <span id="fullNameError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="resEmail">Email Address</label>
+                  <input type="email" id="resEmail" name="resEmail" autocomplete="email">
+                  <span id="resEmailError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="resPhone">Phone Number</label>
+                  <input type="tel" id="resPhone" name="resPhone" autocomplete="tel">
+                  <span id="resPhoneError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="restaurantSelect">Restaurant</label>
+                  <select id="restaurantSelect" name="restaurantSelect">
+                    <option value="">-- Select a restaurant --</option>
+                    <option value="Green Garden Bistro" data-deposit="25">Green Garden Bistro</option>
+                    <option value="Ocean Pearl Seafood" data-deposit="40">Ocean Pearl Seafood</option>
+                    <option value="Roma Flame Trattoria" data-deposit="20">Roma Flame Trattoria</option>
+                    <option value="Sakura Sky Dining" data-deposit="50">Sakura Sky Dining</option>
+                    <option value="Spice Route Kitchen" data-deposit="15">Spice Route Kitchen</option>
+                    <option value="Sunset Grill House" data-deposit="45">Sunset Grill House</option>
+                  </select>
+                  <span id="restaurantSelectError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="resDate">Reservation Date</label>
+                  <input type="date" id="resDate" name="resDate">
+                  <span id="resDateError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="resTime">Reservation Time</label>
+                  <input type="time" id="resTime" name="resTime">
+                  <span id="resTimeError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="numPeople">Number of People</label>
+                  <input type="number" id="numPeople" name="numPeople" min="1">
+                  <span id="numPeopleError" class="error-msg"></span>
+                </div>
+
+                <div class="form-div">
+                  <label for="specialRequests">Special Requests (optional)</label>
+                  <textarea id="specialRequests" name="specialRequests"></textarea>
+                </div>
+
+                <div class="form-div">
+                  <label for="depositAmount">Deposit Amount ($)</label>
+                  <input type="text" id="depositAmount" name="depositAmount" readonly>
+                </div>
+
+                <fieldset class="form-div">
+                  <legend>Deposit Method</legend>
+                  <div class="radio-group">
+                    <label><input type="radio" name="depositMethod" value="voucher"> Voucher</label>
+                    <label><input type="radio" name="depositMethod" value="online"> Online payment</label>
+                  </div>
+                  <span id="depositMethodError" class="error-msg"></span>
+                </fieldset>
+            
+                <div id="voucherFields" class="payment-fields hidden">
+                  <div class="form-div">
+                    <label for="voucherCode">Voucher Code (12 digits)</label>
+                    <input type="text" id="voucherCode" name="voucherCode" maxlength="12">
+                  </div>
+                </div>
+            
+                <div id="cardFields" class="payment-fields hidden">
+                  <div class="form-div">
+                    <label for="cardType">Card Type</label>
+                    <select id="cardType" name="cardType">
+                      <option value="visa">Visa</option>
+                      <option value="mastercard">Mastercard</option>
+                      <option value="amex">American Express</option>
+                    </select>
+                  </div>
+                  <div class="form-div">
+                    <label for="cardNumber">Credit Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber">
+                    <span id="cardNumberError" class="error-msg"></span>
+                  </div>
+                  <div class="form-div">
+                    <label for="cardName">Name on Card</label>
+                    <input type="text" id="cardName" name="cardName">
+                    <span id="cardNameError" class="error-msg"></span>
+                  </div>
+                </div>
+
+                <div class="form-div">
+                  <label for="billingEmail">Billing Email Address</label>
+                  <input type="email" id="billingEmail" name="billingEmail">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="sameAsEmail"> Same as email address
+                  </label>
+                  <span id="billingEmailError" class="error-msg"></span>
+                </div>
+                    <button type="submit" class="button">Submit Reservation</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p> 2026 TableFinder | COS10005 Assignment 2</p>
+        </footer>
+    </body>
+</html>

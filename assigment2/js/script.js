@@ -307,4 +307,28 @@ function checkRestaurantFromURL() {
 
         for (var i = 0; i < select.options.length; i++) {
             if (select.options[i].value == restaurant) {
-                select.sele
+                select.selectedIndex = i;
+            }
+        }
+
+        updateDeposit();
+    }
+}
+
+function clearReservationErrors() {
+    var errors = document.getElementsByClassName("error-msg");
+
+    for (var i = 0; i < errors.length; i++) {
+        errors[i].innerHTML = "";
+    }
+}
+
+function showError(id, message) {
+    document.getElementById(id).innerHTML = message;
+}
+
+window.onload = function () {
+    setupRecommendation();
+    setupRegisterValidation();
+    setupReservationValidation();
+};

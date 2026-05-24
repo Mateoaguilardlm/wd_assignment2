@@ -28,4 +28,54 @@
 
                 <a href="register.html" class="header-user">
                     <img src="images/user.png" alt="User icon">
-                </a
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="rest-container">
+                <h1>Recommended Restaurants</h1>
+                <p>Select your preferences to find the perfect dining experience</p>
+            </div>
+
+            <section class="form-container">
+                <form id="recom-form">
+                    <div class="form-div">
+                        <label for="diet">Dietary Preference</label>
+                        <select id="diet" name="diet" required>
+                            <option value="">-- Select --</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="halal">Halal</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                    <div class="form-div">
+                        <label for="budget">Budget Range (per person)</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">-- Select --</option>
+                            <option value="low">Under $30</option>
+                            <option value="medium">$30 – $55</option>
+                            <option value="high">Over $55</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="purpose">Dining Purpose</label>
+                      <select id="purpose" name="purpose" required>
+                        <option value="">-- Select --</option>
+                        <option value="family">Family</option>
+                        <option value="date">Date</option>
+                        <option value="business">Business</option>
+                      </select>
+                    </div>
+
+                    <button type="button" id="findRecommendBtn" class="button">Find Restaurants</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p> 2026 TableFinder | COS10005 Assignment 2</p>
+        </footer>
+
+    </body>
+</html>
